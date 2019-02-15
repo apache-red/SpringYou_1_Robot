@@ -1,9 +1,7 @@
-﻿# HW_24_Xml_parser_SAX_StAX_DOM
-Задание:
-Закончить XSD схему для family.xml
+﻿# SpringYou_1_Robot
 
-полностью реализовать SAX, StAX, DOM парсеры для family.xml, результат работы любого из парсеров - заполненный List<Family>
- 
+Spring test
+
  
 //test picture
 ![Image alt](https://github.com/apache-red/SpringYou_1_Robot/raw/master/ShowTask.png)
