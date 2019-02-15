@@ -5,14 +5,21 @@
 
 
     <bean id="t1000" class="com.redline.red.spring.impls.robot.ModelT1000">
-    <constructor-arg ref="sonyHand"/>
-    <constructor-arg ref="sonyLeg"/>
-    <constructor-arg ref="sonyHead"/>
+        <constructor-arg ref="sonyHand"/>
+        <constructor-arg ref="sonyLeg"/>
+        <constructor-arg ref="sonyHead"/>
+        
+        <property name="hand" ref="toshibaHand"/>
+        <property name="leg" ref="toshibaLeg"/>
+        <property name="head" ref="toshibaHead"/>
 
+    </bean>
 
-</bean>
-
-
+    <bean id="t2000" class="com.redline.red.spring.impls.robot.ModelT1000">
+        <constructor-arg ref="toshibaHand"/>
+        <constructor-arg ref="toshibaLeg"/>
+        <constructor-arg ref="toshibaHead"/>
+    </bean>
 
 
     <bean id="sonyHand" class="com.redline.red.spring.impls.sony.SonyHand"/>
