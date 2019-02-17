@@ -78,5 +78,7 @@
     <bean id="toshibaHead" class="com.redline.red.spring.impls.toshiba.ToshibaHead"/>
     <bean id="toshibaLeg" class="com.redline.red.spring.impls.toshiba.ToshibaLeg"/>
 
+    <bean class="com.redline.red.spring.impls.other.MyBeanPostProcessor"/>
+
 
 </beans>
