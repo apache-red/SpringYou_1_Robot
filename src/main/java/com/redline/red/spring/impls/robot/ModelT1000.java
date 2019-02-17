@@ -4,8 +4,10 @@ import com.redline.red.spring.interfaces.Hand;
 import com.redline.red.spring.interfaces.Head;
 import com.redline.red.spring.interfaces.Leg;
 import com.redline.red.spring.interfaces.Robot;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 
-public class ModelT1000 implements Robot {
+public class ModelT1000 implements Robot, InitializingBean, DisposableBean {
 
 	private Hand hand;
 	private Leg leg;
@@ -110,6 +112,14 @@ public class ModelT1000 implements Robot {
 
 	private void destroyObject() {
 		System.out.println("destroy");
+	}
+
+	public void destroy() throws Exception {
+		System.out.println(this + " - method destroy()");
+	}
+
+	public void afterPropertiesSet() throws Exception {
+		System.out.println(this + " - method init()");
 	}
 }
 
