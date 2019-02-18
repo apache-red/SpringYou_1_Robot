@@ -7,6 +7,7 @@ default-lazy-init="true"
 	
 	<import resource="toshiba_context.xml" />
 	<import resource="sony_context.xml" />
+	<import resource="db_context.xml"/>
 
 
 	<bean id="t1000" class="com.redline.red.spring.impls.robot.ModelT1000"
