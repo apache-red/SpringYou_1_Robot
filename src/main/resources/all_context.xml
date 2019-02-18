@@ -4,10 +4,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
 	>
 
-
-
-	<import resource="t1000_context.xml" />	
-	
+    <!--здесь xml разделен на части по принципу "Объект". Правильнее разделять по действию.-->
+	<import resource="t1000_context.xml" />
 	<bean class="com.redline.red.spring.impls.other.MyBeanPostProcessor"/>
 
 
