@@ -1,0 +1,84 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+       <!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+       <!--xmlns:p="http://www.springframework.org/schema/p"-->
+       <!--xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"-->
+
+
+
+
+<!--&gt;-->
+    <!--&lt;!&ndash; если я использую MyBeanPOSTPROCESSOR это не нужно&ndash;&gt;-->
+    <!--&lt;!&ndash;default-init-method="initObject"&ndash;&gt;-->
+    <!--&lt;!&ndash;default-destroy-method="destroyObject"&ndash;&gt;-->
+    <!--&lt;!&ndash;default-lazy-init="true"&ndash;&gt;-->
+
+    <!--&lt;!&ndash;по умолчанию загружатюся все бины. Инитов будет много. Или прописывать Lazy-init для бина или default lazy. Экономим память&ndash;&gt;-->
+
+    <!--<bean id="t1000" class="com.redline.red.spring.impls.robot.ModelT1000" lazy-init="true">-->
+        <!--&lt;!&ndash;<constructor-arg ref="sonyHand"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<constructor-arg ref="sonyLeg"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<constructor-arg ref="sonyHead"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;// очередность важна или index выставить. Соответствие типов тоже или type=&ndash;&gt;-->
+        <!--<constructor-arg value="silver" index="0" type="java.lang.String"/>-->
+        <!--<constructor-arg value="2006" index="1" type="int"/>-->
+        <!--<constructor-arg value="true" index="2" type="boolean"/>-->
+        <!--<property name="hand" ref="toshibaHand"/>-->
+        <!--<property name="leg" ref="toshibaLeg"/>-->
+        <!--<property name="head" ref="toshibaHead"/>-->
+
+    <!--</bean>-->
+
+    <!--<bean id="t2000" class="com.redline.red.spring.impls.robot.ModelT1000"-->
+          <!--p:hand-ref="toshibaHand"-->
+          <!--p:leg-ref="toshibaLeg"-->
+          <!--p:head-ref="toshibaHead" scope="prototype"-->
+    <!--&gt;-->
+
+        <!--&lt;!&ndash;<constructor-arg ref="toshibaHand"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<constructor-arg ref="toshibaLeg"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<constructor-arg ref="toshibaHead"/>&ndash;&gt;-->
+    <!--</bean>-->
+
+    <!--<bean id="t1000Empty" class="com.redline.red.spring.impls.robot.ModelT1000">-->
+        <!--<constructor-arg ref="sonyHand"/>-->
+        <!--<constructor-arg ref="sonyLeg"/>-->
+        <!--<constructor-arg ref="sonyHead"/>-->
+    <!--</bean>-->
+
+
+    <!--<bean id="t1000Singletone" class="com.redline.red.spring.impls.robot.ModelT1000" scope="singleton">-->
+        <!--<constructor-arg ref="sonyHand"/>-->
+        <!--<constructor-arg ref="sonyLeg"/>-->
+        <!--<constructor-arg ref="sonyHead"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="t1000Prototype" class="com.redline.red.spring.impls.robot.ModelT1000" scope="prototype">-->
+        <!--<constructor-arg ref="sonyHand"/>-->
+        <!--<constructor-arg ref="sonyLeg"/>-->
+        <!--<constructor-arg ref="sonyHead"/>-->
+    <!--</bean>-->
+
+
+    <!--<bean id="t1000InitDestroy" class="com.redline.red.spring.impls.robot.ModelT1000"-->
+          <!--p:hand-ref="toshibaHand"-->
+          <!--p:leg-ref="toshibaLeg"-->
+          <!--p:head-ref="toshibaHead" scope="prototype"-->
+          <!--init-method="initObject"-->
+          <!--destroy-method="destroyObject"-->
+    <!--&gt;-->
+    <!--</bean>-->
+
+
+    <!--<bean id="sonyHand" class="com.redline.red.spring.impls.sony.SonyHand"/>-->
+    <!--<bean id="sonyHead" class="com.redline.red.spring.impls.sony.SonyHead"/>-->
+    <!--<bean id="sonyLeg" class="com.redline.red.spring.impls.sony.SonyLeg"/>-->
+
+    <!--<bean id="toshibaHand" class="com.redline.red.spring.impls.toshiba.ToshibaHand"/>-->
+    <!--<bean id="toshibaHead" class="com.redline.red.spring.impls.toshiba.ToshibaHead"/>-->
+    <!--<bean id="toshibaLeg" class="com.redline.red.spring.impls.toshiba.ToshibaLeg"/>-->
+
+    <!--<bean class="com.redline.red.spring.impls.other.MyBeanPostProcessor"/>-->
+
+
+<!--</beans>-->
